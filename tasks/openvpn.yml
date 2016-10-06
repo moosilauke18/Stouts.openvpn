@@ -21,4 +21,4 @@
 - include: setup-bridge.yml
 
 - name: Ensure OpenVPN is started
-  service: name={{openvpn_service}} state=restarted enabled=yes
+  service: name={{openvpn_service}} state=started enabled=yes
