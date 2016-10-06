@@ -62,10 +62,3 @@ export KEY_OU="{{ openvpn_key_ou|default('MyOrganizationalUnit') }}"
 
 # X509 Subject Field
 export KEY_NAME="EasyRSA"
-
-# Auth-User-Verify-Pass Vars
-export LDAP_SERVER={{ openvpn_ldap_server }}
-export LDAP_BIND_DN="{{ openvpn_ldap_bind_dn }}"
-export LDAP_BIND_PASSWORD="{{ openvpn_ldap_bind_password}}"
-export LDAP_BASE_DN="{{ openvpn_ldap_base_dn }}"
-export LDAP_SEARCH="{{ openvpn_ldap_search_filter }}"
