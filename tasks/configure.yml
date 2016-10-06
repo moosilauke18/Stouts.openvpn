@@ -19,6 +19,9 @@
   template: src={{item}}.j2 dest={{openvpn_etcdir}}/{{item}} mode=0700
   with_items: [vars, env.sh, build-server.sh, build-client.sh, revoke-client.sh]
 
+- name: Generate env script
+  template: src=env.sh.j2 dest={{openvpn_etcdir}}/env.sh mode=0777
+
 - name: Generate Server keys
   command: "{{openvpn_etcdir}}/build-server.sh"
   args: { creates: "{{ openvpn_keydir }}" }
