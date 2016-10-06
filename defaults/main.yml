@@ -61,6 +61,10 @@ openvpn_use_ldap: no
 openvpn_ldap_tlsenable: 'no'
 openvpn_ldap_follow_referrals: 'no'
 
+# 2FA authentication
+openvpn_auth_user_pass_verify: yes
+openvpn_auth_user_pass_verify_executable: ""
+
 # Use simple authentication (default is disabled)
 openvpn_simple_auth: no
 openvpn_simple_auth_password: ""
