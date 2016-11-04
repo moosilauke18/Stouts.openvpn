@@ -154,6 +154,7 @@ plugin {{openvpn_use_pam_plugin|default(openvpn_use_pam_plugin_distribution)}} o
 {% endif %}
 
 {% if openvpn_use_ldap %}
+client-cert-not-required
 plugin {{ openvpn_use_ldap_plugin | default(openvpn_use_ldap_plugin_distribution) }} "/etc/openvpn/auth-ldap.conf"
 {% endif %}
 
